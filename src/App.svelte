@@ -1,10 +1,13 @@
 <script>
+  window['dbg'] = window.location.href.includes('?debug')
+  window['dbg'] && console.log('\n---debug messaging enabled---\n\n')
   import Content from './Content.svelte'
-  // if there are reasons to not show the app, can set them here
-  //  for me this is a placeholder for logins or fetching data
-  let reasons = true;
+  import Spinner from './components/Spinner.svelte'
+  import { getAuth, accessToken } from './stores/auth/auth'
 </script>
 
-{#if reasons}
-<Content />
-{/if}
+{#await getAuth()}
+  <Spinner message={'Logging in...'} />
+{:then _}
+  <Content />
+{/await}
