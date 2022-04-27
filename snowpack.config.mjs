@@ -2,7 +2,7 @@
 export default {
   mount: {
     public: '/',
-    src: '/build',
+    src: '/',
   },
   plugins: [
     '@snowpack/plugin-svelte',
