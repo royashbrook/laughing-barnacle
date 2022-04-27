@@ -13,7 +13,7 @@ Clone repo, then run `npm install` in the project root. After that `npm run star
 
 # See it
 
-[![vercel deployment](https://therealsujitk-vercel-badge.vercel.app/?app=stunning-bassoon&style=for-the-badge)](https://stunning-bassoon.vercel.app/)
+[![vercel deployment](https://therealsujitk-vercel-badge.vercel.app/?app=laughing-barnacle&style=for-the-badge)](https://stunning-bassoon.vercel.app/)
 
 https://stunning-bassoon.vercel.app/
 
