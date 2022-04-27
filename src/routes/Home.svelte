@@ -1,11 +1,12 @@
-<h2>Home component</h2>
+<script>
+    import { accessToken, user } from '../stores/auth/auth'
+    import { getData, data} from '../stores/graph/data';
+</script>
 
-<p>
-    This sample shows how to set up the router with minimum functionality. <br/>
-    The route definition object contains a number of routes (including some with parameters and a catch-all at the end).<br/>
-    The links below allow navigating between pages.
-</p>
-
-<p>This is the Home component, which contains markup only.</p>
-
-<p><em>Hint:</em> Try navigating with the links below, then use your browser's back and forward buttons.</p>
+<h2>Welcome, {$user}!</h2>
+<h4>Congratulations! You got a token!</h4>
+<p><code>{$accessToken?.substring(0,20) + '...'}</code></p>
+<button on:click={getData}>Do something with the token!</button>
+{#if $data}
+<pre width="100%">{JSON.stringify($data,null,2)}</pre>
+{/if}
